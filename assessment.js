@@ -102,7 +102,7 @@ var thirdHero = (heroes.slice(1, 2)).toString();
 // console.log(secondHero);
 // console.log(thirdHero);
 
- 
+
 
 //#9 Write a function called addItem, that takes in an array, and adds the item to
 // the array.
@@ -114,7 +114,7 @@ function addItem(arr, item) {
   return arr;
 
 };
- 
+
 
 //#10 Write a function called removeItem, that takes in an array of strings, and a string.
 // Removes all instances of that string from the array. And return the modified array.
@@ -124,7 +124,7 @@ function removeItem(arr, str) {
   for (var i = 0; i <= arr.length; i++) {
     // console.log(arr);
     if (arr[i] === str) {
-      arr.splice(i, 1);
+      arr.splice(i--, 1);
     }
     if (arr.length === 1) {
       arr.shift();
@@ -149,7 +149,7 @@ function doubleTheFun(thingToDouble) {
     } else {
       return thingToDouble * 2;
     }
-    
+
   }
 }
 
@@ -173,7 +173,7 @@ function makeChatMessage(messageP, authorP) {
   return obj;
 }
 
-//#14 Create a function called coderTest that takes in an object that is a person, it looks to see if the person’s name is Jeremy and changes the person object to have a property called lovesCode with a value of 10.  If their name is Brack set lovesCode to 0.  otherwise set lovesCode to 5. 
+//#14 Create a function called coderTest that takes in an object that is a person, it looks to see if the person’s name is Jeremy and changes the person object to have a property called lovesCode with a value of 10.  If their name is Brack set lovesCode to 0.  otherwise set lovesCode to 5.
 
 function coderTest(personObj) {
   if (personObj.name === "Jeremy") {
@@ -193,7 +193,7 @@ function coderTest(personObj) {
     temperature under 40 and cloudiness over 60 - return "I have icecicles"
     temperature over 80 and humidity under 40 and cloudiness under 20 - return "I'm literally in the desert"
     temperature over 80 or humidity over 50 or cloudiness over 50 - return "Hmm, probably not"
-    Otherwise - return "I love outside" 
+    Otherwise - return "I love outside"
 */
 
 function outside(temp, humidity, cloudiness) {
@@ -205,7 +205,7 @@ function outside(temp, humidity, cloudiness) {
     return "I'm literally in the desert";
   } else if (temp > 80 || humidity > 50 || cloudiness > 50) {
     return "Hmm, probably not";
-  } 
+  }
   return "I love outside";
 }
 
